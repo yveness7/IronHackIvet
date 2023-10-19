@@ -174,7 +174,7 @@ def examine_item(item_name):
                         have_key = True
                 if(have_key):
                     output += "\n\n>>> You unlock it with a key you have. Well done!!! <<<"
-                    print(unlocked__art)
+                    print(unlocked_art)
                     next_room = get_next_room_of_door(item, current_room)
                 else:
                     output += "\nIt is locked but you don't have the key. Keep trying."
