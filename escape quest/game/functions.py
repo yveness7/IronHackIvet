@@ -2,6 +2,148 @@
 
 # functions.py
 
+# define rooms and items
+
+couch = {
+    "name": "couch",
+    "type": "furniture",
+
+}
+
+door_a = {
+    "name": "door a",
+    "type": "door",
+}
+
+key_a = {
+    "name": "key for door a",
+    "type": "key",
+    "target": door_a,
+}
+
+piano = {
+    "name": "piano",
+    "type": "furniture",
+}
+
+game_room = {
+    "name": "game room",
+    "type": "room",
+}
+
+bedroom1 = {
+    "name": "bedroom 1",
+    "type": "room",
+}
+
+bedroom2 = {
+    "name": "bedroom 2",
+    "type": "room",
+}
+
+living_room = {
+    "name": "living room",
+    "type": "room",
+}
+
+door_b = {
+    "name": "door b",
+    "type": "door",
+}
+
+queen_bed = {
+    "name": "queen bed",
+    "type": "furniture",
+}
+
+double_bed = {
+    "name": "double bed",
+    "type": "furniture",
+
+}
+
+dinning_table = {
+    "name" : "double bed",
+    "type" : "furniture",
+
+}
+
+dresser = {
+    "name": "dresser",
+    "type": "furniture",
+
+}
+
+dinning_table = {
+    "name": "dinning table",
+    "type": "furniture",
+
+}
+
+key_b = {
+    "name": "key for door b",
+    "type": "key",
+    "target": door_b,
+}
+
+door_c = {
+    "name": "door c",
+    "type": "door",
+}
+
+key_c = {
+    "name": "key for door c",
+    "type": "key",
+    "target": door_c,
+}
+
+door_d = {
+    "name": "door d",
+    "type": "door",
+}
+
+key_d = {
+    "name": "key for door d",
+    "type": "key",
+    "target": door_d,
+}
+
+outside = {
+  "name": "outside"
+}
+
+all_rooms = [game_room, bedroom1, bedroom2, living_room, outside]
+
+all_doors = [door_a, door_b, door_c, door_d]
+
+# define which items/rooms are related
+
+object_relations = {
+    "game room": [couch, piano, door_a],
+    "piano": [key_a],
+    "bedroom 1": [queen_bed, door_b,door_c],
+    "queen bed": [key_b],
+    "bedroom 2": [door_b, double_bed, dresser],
+    "double bed": [key_c],
+    "dresser": [key_d],
+    "living room": [dinning_table, door_d],
+    "door a": [game_room, bedroom1],
+    "door b": [bedroom1, bedroom2],
+    "door c": [bedroom1, living_room],
+    "door d": [outside],
+    "dinning table": [living_room]
+}
+
+# define game state. Do not directly change this dict. 
+# Instead, when a new game starts, make a copy of this
+# dict and use the copy to store gameplay state. This 
+# way you can replay the game multiple times.
+
+game_state = {
+    "current_room": game_room,
+    "keys_collected": [],
+    "target_room": outside
+}
 
 
 def linebreak():
