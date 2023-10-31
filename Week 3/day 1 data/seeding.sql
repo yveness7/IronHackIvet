@@ -1,6 +1,6 @@
 use mydb;
 
-INSERT INTO cars (id, VIN, Manufacturer, model, year, color)
+INSERT INTO cars (car_ID, VIN, manufacturer, model, year, color)
 VALUES 	(1,'3K096I98581DHSNUP','Volkswagen','Tiguan',2019,'Blue'),
 		(2 ,'ZM8G7BEUQZ97IH46V','Peugeot','Rifter',2019,'Red'),
 		(3 ,'RKXVNNIHLVVZOUB4M','Ford','Fusion',2018,'White'),
@@ -12,7 +12,7 @@ VALUES 	(1,'3K096I98581DHSNUP','Volkswagen','Tiguan',2019,'Blue'),
        SELECT * FROM cars;
 
 
-INSERT INTO salesperson (id, staff_id, name, store)
+INSERT INTO salesperson (idsalesperson, staff_ID, name, store)
 VALUES  (1, 00001,'Petey Cruiser', 'Madrid'),
 		(2, 	00002 	,'Anna Sthesia', 	'Barcelona'),
 		(3, 	00003 ,	'Paul Molive','Berlin'),
@@ -43,6 +43,14 @@ VALUES 	(1, 852399038,22-08-2018),
 		(3, 271135104,22-01-2019);
 
 		SELECT * FROM invoices;
+        
+        
+DROP TABLE campus;
+DROP TABLE campus_has_courses;
+DROP TABLE courses;
+DROP TABLE students;
+
+
 
 
 
